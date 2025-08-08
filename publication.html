@@ -1,109 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | EcoDapt Lab</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f8f9fa;
-        }
-        nav {
-            background: #004225;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        header {
-            background: url('images/drone-header.jpg') center/cover no-repeat;
-            color: white;
-            text-align: center;
-            padding: 4rem 1rem;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 2rem;
-        }
-        h2 {
-            color: #004225;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 0.5rem;
-        }
-        ul.publications {
-            list-style: none;
-            padding: 0;
-        }
-        ul.publications li {
-            background: white;
-            margin: 0.5rem 0;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        ul.publications li a {
-            color: #006400;
-            text-decoration: none;
-        }
-        ul.publications li a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications | EcoDapt Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #333; }
+    header { background-color: #004225; color: white; padding: 2rem; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    nav { margin-top: 1rem; }
+    nav a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 500;
+      margin-right: 1rem;
+    }
+    .section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
+    .section h2 { font-size: 2rem; margin-bottom: 1.2rem; color: #004225; }
+    .pub-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .pub-item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      padding: 1.5rem;
+    }
+    .pub-item h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1c1f30;
+    }
+    .pub-item p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    footer {
+      margin-top: 4rem;
+      background: #004225;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
+<nav style="background:#004225; padding:1rem; text-align:center;">
+  <a href="index.html" style="color:white; margin:0 1rem; text-decoration:none;">Home</a>
+  <a href="research.html" style="color:white; margin:0 1rem; text-decoration:none;">Research</a>
+  <a href="team.html" style="color:white; margin:0 1rem; text-decoration:none;">Team</a>
+  <a href="publications.html" style="color:white; margin:0 1rem; text-decoration:none;">Publications</a>
+  <a href="#contact" style="color:white; margin:0 1rem; text-decoration:none;">Contact</a>
+</nav>
+<header>
+  <nav>
+    <a href="index.html">← Back to Homepage</a>
+  </nav>
+  <h1>Our Publications</h1>
+  <p>Sharing our contributions to science, policy, and innovation</p>
+</header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="team.html">Team</a>
-        <a href="publications.html">Publications</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Page Header -->
-    <header>
-        <h1>Our Publications</h1>
-        <p>Peer-reviewed articles, conference papers, and reports</p>
-    </header>
-
-    <!-- Content -->
-    <div class="container">
-        <h2>2025</h2>
-        <ul class="publications">
-            <li>
-                Umeogu, C., et al. (2025). *Phenological Tipping Points and Climate Sensitivity in African Drylands*. Journal of Climate Change Research. 
-                <a href="#" target="_blank">Read more</a>
-            </li>
-            <li>
-                Umeogu, C., et al. (2025). *Run-of-River Hydropower for Sustainable Community Energy in Nigeria*. Renewable Energy Journal.
-                <a href="#" target="_blank">Read more</a>
-            </li>
-        </ul>
-
-        <h2>2024</h2>
-        <ul class="publications">
-            <li>
-                Umeogu, C., et al. (2024). *Satellite-based Monitoring of Vegetation-Climate Interactions*. Remote Sensing Letters.
-                <a href="#" target="_blank">Read more</a>
-            </li>
-        </ul>
+<section class="section">
+  <h2>Peer-Reviewed Articles</h2>
+  <div class="pub-list">
+    <div class="pub-item">
+      <h3>Doe, J., Umeogu, C., et al. (2025)</h3>
+      <p>Phenological tipping points in African drylands: Early signals of ecosystem collapse. <em>Journal of Climate Science</em>, 45(3), 456–478.</p>
     </div>
+    <div class="pub-item">
+      <h3>Umeogu, C., Smith, A., et al. (2024)</h3>
+      <p>Integrating UAV and satellite data for improved drought monitoring. <em>Remote Sensing Applications</em>, 12(2), 210–225.</p>
+    </div>
+  </div>
+
+  <h2>Conference Papers</h2>
+  <div class="pub-list">
+    <div class="pub-item">
+      <h3>Umeogu, C., et al. (2023)</h3>
+      <p>Climate–phenology sensitivity modeling for African ecosystems. In: <em>International Conference on Earth Observation</em>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 EcoDapt Lab. All rights reserved.
+</footer>
 
 </body>
 </html>
