@@ -7,6 +7,18 @@ body {
     color: #212529;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.03" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.1"/></svg>');
     background-repeat: repeat;
+  /* Remove any background-image: url('path/to/texture.png'); to avoid conflicts */
+}
+/* Increase font size for better readability */
+body {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Add subtle background texture */
+body {
+  background-image: url('path/to/texture.png');
+  background-repeat: repeat;
 }
 
 /* Header common */
@@ -29,9 +41,10 @@ header.hero {
   background: url(Image/background.png) center top 30%/cover no-repeat;
   color: white;
   padding: 4rem 2rem;
-  padding-top: 5.5rem; /* Clear navbar */
+  padding-top: 5.5rem; /* Ensure space for sticky navbar */
   text-align: center;
   position: relative;
+  z-index: 1;
 }
 
 /* Typography for header.hero */
@@ -57,8 +70,24 @@ nav a {
   margin-right: 1rem;
 }
 
+/* Enhance link interactivity */
+nav a:hover, .button:hover {
+  background-color: #005a3c;
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Sticky navigation bar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #004225;
+}
+
 /* Navbar styling */
-.navbar {
+/*.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,16 +100,37 @@ nav a {
   z-index: 1002;
   backdrop-filter: blur(8px);
   position: relative;
+}*/
+/* Navbar adjustments */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #004225;
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo img {
+  height: 40px;
+  max-height: none;
+  background: rgba(255,255,255,0.85);
+  padding: 2px;
+  border-radius: 2%;
+  object-fit: contain;
 }
 
-.navbar .logo img {
+/*.navbar .logo img {
   background: rgba(255, 255, 255, 0.85);
   padding: 2px;
   border-radius: 2%;
   height: 40px;
   max-height: none;
   object-fit: contain;
-}
+}*/
 
 /* Menu styling */
 .menu {
@@ -109,6 +159,9 @@ nav a {
   cursor: pointer;
   z-index: 1001;
   position: relative;
+}
+.menu-icon {
+  left: -20px;
 }
 
 /* Mobile menu */
@@ -144,7 +197,15 @@ nav a {
   text-decoration: none;
   font-weight: 600;
 }
-
+.cta-btns a:hover,
+.btn-dark:hover,
+.btn-light:hover,
+.btn-blue:hover {
+  background-color: #005a3c;
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
 .btn-dark {
   background-color: #1c1f30;
   color: #fff;
@@ -226,7 +287,7 @@ nav a {
   gap: 2rem;
 }
 
-.card {
+/*.card {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
@@ -235,6 +296,15 @@ nav a {
   font-size: 1rem;
   color: white;
   text-align: center;
+}*/
+.card {
+  background: white !important;
+  color: #1c1f30 !important;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  padding: 1.5rem;
 }
 
 .card h3 {
@@ -334,6 +404,14 @@ footer {
   text-align: center;
   padding: 1.5rem;
   font-size: 0.9rem;
+}
+/* Footer styling */
+footer {
+  background-color: #003d1f;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
 }
 
 /* Social icons (common) */
