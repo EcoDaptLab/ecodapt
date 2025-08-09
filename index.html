@@ -36,6 +36,20 @@
   background: #0f3d2e;
   padding: 0.5rem 1rem;
 }
+
+/* Transparent navbar overlay */
+.navbar {
+  background-color: #0f3d2e;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* ensures it's above the hero image */
+  backdrop-filter: blur(8px);
+}
+.navbar {
+  position: relative;
+  z-index: 1002;
+}
 .navbar .logo img {
   background: rgba(255, 255, 255, 0.85);
   padding: 2px;
@@ -59,10 +73,11 @@
 .menu-icon {
   z-index: 1001; /* hamburger on top of menu */
 }
-
-.navbar {
-  position: relative;
-  z-index: 1002;
+/* Mobile view: make only the dropdown menu transparent */
+@media (max-width: 768px) {
+  .menu {
+    background-color: transparent; /* Fully transparent */
+  }
 }
 
 .menu li a {
@@ -88,7 +103,8 @@
   .menu {
     display: none;
     flex-direction: column;
-    background: #0f3d2e;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
     position: absolute;
     top: 60px;
     right: 0;
