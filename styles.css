@@ -17,7 +17,7 @@ body {
 
 /* Add subtle background texture */
 body {
-  background-image: url('path/to/texture.png');
+  background-image: url('Image/texture.jpg');
   background-repeat: repeat;
 }
 
