@@ -28,34 +28,27 @@
     .btn-blue { background-color: #1c1f30; color: white; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 1.2rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem; }
     
-  /* Navbar styling */
+/* Navbar styling */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #0f3d2e;
-  padding: 0.5rem 1rem;
-}
-
-/* Transparent navbar overlay */
-.navbar {
-  background-color: #0f3d2e;
+  padding: 0.25rem 1rem; /* reduce vertical padding */
+  height: 50px;          /* fixed smaller height */
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1000; /* ensures it's above the hero image */
+  z-index: 1002;
   backdrop-filter: blur(8px);
 }
-.navbar {
-  position: relative;
-  z-index: 1002;
-}
+
 .navbar .logo img {
   background: rgba(255, 255, 255, 0.85);
   padding: 2px;
   border-radius: 2%;
-  height: 150px; /* bigger logo */
-  max-height: 15vh; /* scales down slightly on small screens */
+  height: 40px;          /* smaller logo height */
+  max-height: none;      /* remove max-height to avoid conflicts */
   object-fit: contain;
 }
 
@@ -63,21 +56,7 @@
   list-style: none;
   display: flex;
   gap: 1rem;
-}
-
-/* Ensure mobile menu overlays background */
-.menu {
-  z-index: 1000; /* menu on top */
-}
-
-.menu-icon {
-  z-index: 1001; /* hamburger on top of menu */
-}
-/* Mobile view: make only the dropdown menu transparent */
-@media (max-width: 768px) {
-  .menu {
-    background-color: transparent; /* Fully transparent */
-  }
+  z-index: 1000;
 }
 
 .menu li a {
@@ -86,16 +65,19 @@
   font-weight: bold;
 }
 
-/* Hide checkbox and style menu icon */
+/* Hide checkbox */
 #menu-toggle {
   display: none;
 }
 
+/* Menu icon (hamburger) */
 .menu-icon {
   display: none;
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
+  z-index: 1001;
+  position: relative;
 }
 
 /* Mobile view */
@@ -112,14 +94,17 @@
     padding: 1rem;
   }
 
+  /* Show menu when toggled */
   #menu-toggle:checked + .menu-icon + .menu {
     display: flex;
   }
 
   .menu-icon {
     display: block;
+    left: -15px; /* Shift toggle 15px left */
   }
 }
+
  .card {
       padding: 1rem; border-radius: 8px; color: white; text-align: center;
       font-weight: 600; font-size: 1rem;
