@@ -65,13 +65,30 @@
 }
 
 .navbar .logo img {
-  height: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2px;
+  border-radius: 2%;
+  height: 150px; /* bigger logo */
+  max-height: 15vh; /* scales down slightly on small screens */
+  object-fit: contain;
 }
 
 .menu {
   list-style: none;
   display: flex;
   gap: 1rem;
+}
+.menu {
+  z-index: 1000; /* ensures menu stays on top */
+}
+
+.menu-icon {
+  z-index: 1001; /* keeps hamburger clickable above everything */
+}
+
+.navbar {
+  position: relative; /* so z-index stacking works properly */
+  z-index: 1002;
 }
 
 .menu li a {
@@ -175,7 +192,7 @@
       <h3 style="margin-bottom:0.8rem;">Quick Links</h3>
       <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
         <li><a href="index.html" style="color:white; text-decoration:none;">Home</a></li>
-        <li><a href="about.html" style="color:white; text-decoration:none;">About</a></li>
+        <li><a href="index.html#about" style="color:white; text-decoration:none;">About</a></li>
         <li><a href="publications.html" style="color:white; text-decoration:none;">Publications</a></li>
         <li><a href="index.html#contact" style="color:white; text-decoration:none;">Contact</a></li>
       </ul>

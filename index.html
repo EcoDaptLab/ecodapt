@@ -37,13 +37,32 @@
   padding: 0.5rem 1rem;
 }
 .navbar .logo img {
-  height: 80px; /* or even 80px if you want it to stand out */
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2px;
+  border-radius: 2%;
+  height: 150px; /* bigger logo */
+  max-height: 15vh; /* scales down slightly on small screens */
+  object-fit: contain;
 }
 
 .menu {
   list-style: none;
   display: flex;
   gap: 1rem;
+}
+
+/* Ensure mobile menu overlays background */
+.menu {
+  z-index: 1000; /* menu on top */
+}
+
+.menu-icon {
+  z-index: 1001; /* hamburger on top of menu */
+}
+
+.navbar {
+  position: relative;
+  z-index: 1002;
 }
 
 .menu li a {
@@ -85,7 +104,7 @@
     display: block;
   }
 }
-    .card {
+ .card {
       padding: 1rem; border-radius: 8px; color: white; text-align: center;
       font-weight: 600; font-size: 1rem;
     }
@@ -172,12 +191,12 @@
     <p>We bridge Earth Observation, AI, and field science to tackle drought, biodiversity loss, and climate resilience.</p>
     <div class="cta-btns">
       <a href="research.html" class="btn-dark">Explore Our Work</a>
-      <a href="#contact" class="btn-light">Request Collaboration</a>
+      <a href="index.html#contact" class="btn-light">Request Collaboration</a>
     </div>
   </header>
   
 
-<section class="section">
+<section class="section" id="about">
   <h2>About EcoDapt Lab</h2>
   <p>EcoDapt Lab leads innovative research at the intersection of vegetation ecology and climate science. We specialize in Earth observation (EO) modeling, phenologic analysis, and UAV-based vegetation mapping to monitor and adapt to environmental changes across Africa.</p>
   <p>Our mission is to pioneer vegetation–climate intelligence, equipping stakeholders with insights for sustainable land management and climate adaptation.</p>
@@ -235,7 +254,7 @@
       <h3 style="margin-bottom:0.8rem;">Quick Links</h3>
       <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
         <li><a href="index.html" style="color:white; text-decoration:none;">Home</a></li>
-        <li><a href="about.html" style="color:white; text-decoration:none;">About</a></li>
+        <li><a href="index.html#about" style="color:white; text-decoration:none;">About</a></li>
         <li><a href="publications.html" style="color:white; text-decoration:none;">Publications</a></li>
         <li><a href="index.html#contact" style="color:white; text-decoration:none;">Contact</a></li>
       </ul>
