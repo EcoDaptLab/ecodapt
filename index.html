@@ -85,15 +85,90 @@
   /* Hover: white background with brand-green icon */
   .social-icons a:hover { background: #ffffff; transform: translateY(-2px); }
   .social-icons a:hover svg { fill: #006d5b; }
+  /* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f3d2e;
+  padding: 0.5rem 1rem;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+body.index-page .navbar .logo {
+    display: none;
+  }
+  body.index-page .navbar {
+    justify-content: center;
+  }
+  body.index-page .navbar .menu {
+    margin: 0;
+  }
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hide checkbox and style menu icon */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #0f3d2e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
   </style>
 </head>
-<body>
-<nav style="background:#004225; padding:1rem; text-align:center; position:sticky; top:0; z-index:1000;">
-  <a href="index.html" style="color:white; margin:0 1rem; text-decoration:none;">Home</a>
-  <a href="research.html" style="color:white; margin:0 1rem; text-decoration:none;">Research</a>
-  <a href="team.html" style="color:white; margin:0 1rem; text-decoration:none;">Team</a>
-  <a href="publications.html" style="color:white; margin:0 1rem; text-decoration:none;">Publications</a>
-  <a href="index.html#contact" style="color:white; margin:0 1rem; text-decoration:none;">Contact</a>
+<body class="index-page">
+<nav class="navbar">
+  <div class="logo">
+    <img src="image/Logo.png" alt="EcoDapt Lab Logo">
+  </div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
 </nav>
 
   <header class="hero">
