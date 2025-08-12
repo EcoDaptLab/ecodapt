@@ -457,3 +457,21 @@ footer {
 .social-icons a:hover svg {
   fill: #006d5b;
 }
+ .ecodapt-attribution {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.85); /* good on dark footers; use #666 for light footers */
+    opacity: 0.95;
+    margin-top: 0.6rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* alternate style if footer background is light */
+  .ecodapt-attribution.light {
+    color: #666;
+  }
+
+  /* keep it unobtrusive on very small screens */
+  @media (max-width: 480px) {
+    .ecodapt-attribution { font-size: 0.75rem; padding: 0 0.5rem; }
+  }
