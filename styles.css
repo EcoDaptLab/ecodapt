@@ -9,6 +9,7 @@ body {
     background-repeat: repeat;
   /* Remove any background-image: url('path/to/texture.png'); to avoid conflicts */
 }
+
 /* Increase font size for better readability */
 body {
   font-size: 1.1rem;
@@ -154,6 +155,19 @@ nav {
   border-radius: 2%;
   object-fit: contain;
 }
+/* Remove the top gap on the main navbar */
+.navbar { 
+  margin-top: 0 !important; 
+  top: 0;                /* ensure it sits flush when sticky */
+}
+
+/* Keep spacing only for small navs inside page headers (e.g., “← Back to Homepage”) */
+header nav { 
+  margin-top: 1rem; 
+}
+
+/* Belt-and-suspenders: no default page margins */
+html, body { margin: 0; padding: 0; }
 
 /*.navbar .logo img {
   background: rgba(255, 255, 255, 0.85);
