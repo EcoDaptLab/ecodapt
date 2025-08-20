@@ -46,17 +46,17 @@ header h1 {
 }
 
 /* Specific header.hero for index page */
+/* Default desktop/tablet hero */
 header.hero {
-  background: url(Image/background.png) center top 30%/cover no-repeat;
+  background: url(Image/background.png) center top 30% / cover no-repeat;
   color: white;
-  padding: 4rem 2rem;
-  padding-top: 5.5rem; /* Ensure space for sticky navbar */
+  padding: 5.5rem 2rem 2rem; /* top padding for sticky navbar */
   text-align: center;
   position: relative;
   z-index: 1;
 }
 
-/* Typography for header.hero */
+/* Typography for desktop */
 header.hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
@@ -65,7 +65,30 @@ header.hero h1 {
 header.hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  header.hero {
+    height: 100vh; /* Only mobile full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header.hero h1 {
+    font-size: 1.6rem;
+  }
+
+  header.hero p {
+    font-size: 0.9rem;
+  }
+}
+
 
 /* Navigation */
 nav {
@@ -429,29 +452,6 @@ nav {
   font-size: 0.95rem;
   color: #555;
   margin: 0.3rem 0;
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-  .hero {
-    height: 100vh; /* take full mobile screen */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* center content vertically */
-    align-items: center; /* center horizontally */
-    text-align: center;
-    padding: 0; /* remove extra padding */
-  }
-
-  .hero img.logo {
-    max-width: 150px; /* smaller logo for mobile */
-    margin-bottom: 10px;
-  }
-
-  .hero h1 {
-    font-size: 1.6rem; /* scale down header text */
-    margin: 0;
-  }
 }
 
 /* Footer common */
