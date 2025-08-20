@@ -97,12 +97,15 @@
   </div>
 
   <div class="footer-bottom">
-    <p>© 2025 EcoDapt Lab. All rights reserved.<br>
-    Advancing Vegetation–Climate Research Across Africa</p>
-    <p class="attribution">Site design and content support by EcoDapt Lab team with AI-assisted development</p>
+  <p>© <span id="year"></span> EcoDapt Lab. All rights reserved.</p>
+  <p>Advancing Vegetation–Climate Research Across Africa</p>
+  <p>❤️ Site design and content support by EcoDapt Lab team with AI-assisted development</p>
   </div>
 </footer>
 
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

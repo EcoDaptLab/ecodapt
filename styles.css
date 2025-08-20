@@ -92,9 +92,6 @@ header.hero p {
 
 
 /* Navigation */
-nav {
-  margin-top: 1rem;
-}
 
 nav a {
   color: #fff;
@@ -120,33 +117,32 @@ nav {
 }
 
 /* Navbar styling */
-/*.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #0f3d2e;
-  padding: 0.25rem 1rem;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1002;
-  backdrop-filter: blur(8px);
-  position: relative;
-}*/
-/* Navbar adjustments */
+/* === Navbar Fixes === */
 .navbar {
   position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: #004225;
-  backdrop-filter: blur(8px);
+  left: 0;
+  right: 0;
+  margin: 0 !important;
   padding: 0.5rem 1rem;
+  background: #004225;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+/* Remove extra gap above navbar */
+header nav {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Remove global nav spacing causing whitespace */
+nav {
+  margin-top: 0 !important;
+}
+
 .navbar .logo img {
   height: 40px;
   max-height: none;
