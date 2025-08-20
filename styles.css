@@ -49,7 +49,7 @@ header h1 {
 /* Specific header.hero for index page */
 /* Default desktop/tablet hero */
 header.hero {
-  background: url(Image/background.png) center top 30% / cover no-repeat;
+  background: url(Image/background.webp) center top 30% / cover no-repeat;
   color: white;
   padding: 5.5rem 2rem 2rem; /* top padding for sticky navbar */
   text-align: center;
