@@ -47,7 +47,7 @@ header h1 {
 
 /* Specific header.hero for index page */
 header.hero {
-  background: url(Image/background.png) center top 30%/cover no-repeat;
+  background: url(Image/background.png) center top 20%/cover no-repeat;
   color: white;
   padding: 4rem 2rem;
   padding-top: 5.5rem; /* Ensure space for sticky navbar */
@@ -432,72 +432,59 @@ nav {
 }
 
 /* Footer common */
-footer {
-  margin-top: 4rem;
-  background: #004225;
+.footer {
+  background: #006b5c; 
   color: white;
   text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-}
-/* Footer styling */
-footer {
-  background-color: #003d1f;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-  margin-top: 4rem;
+  padding: 30px 15px;
 }
 
-/* Social icons (common) */
-.social-icons {
+.footer-container {
   display: flex;
-  gap: 0.6rem;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
-  background: transparent;
-  transition: background 0.18s, transform 0.12s;
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
   text-decoration: none;
 }
 
-.social-icons a svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
-  transition: fill 0.15s;
+.footer-section ul li a:hover {
+  text-decoration: underline;
 }
 
-.social-icons a:hover {
-  background: #ffffff;
-  transform: translateY(-2px);
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 0 8px;
+  display: inline-block;
 }
 
-.social-icons a:hover svg {
-  fill: #006d5b;
+.footer-bottom {
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.6;
 }
- .ecodapt-attribution {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.85); /* good on dark footers; use #666 for light footers */
-    opacity: 0.95;
-    margin-top: 0.6rem;
-    text-align: center;
-    line-height: 1.2;
-  }
 
-  /* alternate style if footer background is light */
-  .ecodapt-attribution.light {
-    color: #666;
-  }
-
-  /* keep it unobtrusive on very small screens */
-  @media (max-width: 480px) {
-    .ecodapt-attribution { font-size: 0.75rem; padding: 0 0.5rem; }
-  }
+.footer-bottom .attribution {
+  font-size: 12px;
+  color: #d1e7e3;
+}
