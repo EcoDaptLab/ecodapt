@@ -30,6 +30,9 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Header common */
 header {
@@ -423,6 +426,70 @@ html, body { margin: 0; padding: 0; }
   filter: invert(28%) sepia(48%) saturate(423%) hue-rotate(92deg) brightness(90%) contrast(88%);
 }
 
+.theme-link,
+.tool-link {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 9999px;  /* makes it pill-shaped */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-link.active,
+.tool-link.active {
+  background-color: #2e7d32; /* green pill */
+  color: #fff;               /* white text inside */
+  font-weight: 500;
+}
+
+/* Research Tools */
+#research-tools {
+  margin: 50px 0;
+  padding: 20px;
+}
+
+#research-tools h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tool-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tool-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.tool-logo img {
+  width: 60px;
+  height: auto;
+}
+
+.tool-info p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.tool-screenshot img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
 /* Team page */
 .team-section {
   padding: 4rem 2rem;
@@ -463,6 +530,47 @@ html, body { margin: 0; padding: 0; }
   color: #555;
   margin: 0.3rem 0;
 }
+
+/* Grants */
+.grants {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.grants h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.grants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.grant img {
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.grant p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+.grant-link {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* adjust spacing between logo and name */
+  text-decoration: none;
+  color: inherit; /* keeps text color consistent */
+}
+
+.grant-link img {
+  height: 30px; /* adjust logo size */
+}
+
 
 /* Footer common */
 footer {

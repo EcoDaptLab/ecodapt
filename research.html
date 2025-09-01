@@ -35,36 +35,83 @@
   <div class="research-grid">
     <div class="card">
       <img src="Image/Climate–Vegetation Modeling.png" alt="Climate–Vegetation Modeling Icon" class="theme-icon">
-      <h3>Climate–Vegetation Modeling</h3>
+      <h3><a href="#cpsm" class="theme-link" id="theme-cpsm">Climate–Vegetation Modeling</a></h3>
       <p>We develop dynamic models that quantify how vegetation systems respond to climate variability using Earth observation and in-situ data.</p>
     </div>
     <div class="card">
       <img src="Image/Phenology & Drought Monitoring.png" alt="Phenology & Drought Monitoring Icon" class="theme-icon">
-      <h3>Phenology & Drought Monitoring</h3>
+      <h3><a href="#vematool" class="theme-link" id="theme-vematool">Phenology & Drought Monitoring</a></h3>
       <p>Monitoring plant seasonal patterns to detect stress signals and support early drought warning systems across African drylands.</p>
     </div>
     <div class="card">
       <img src="Image/UAV–Satellite Calibration.png" alt="UAV–Satellite Calibration Icon" class="theme-icon">
-      <h3>UAV–Satellite Calibration</h3>
+      <h3><a href="#uav" class="theme-link">UAV–Satellite Calibration</a></h3>
       <p>Using drone data to validate and fine-tune remote sensing models for more accurate vegetation and land health assessments.</p>
     </div>
     <div class="card">
       <img src="Image/Species Distribution & Conservation.png" alt="Species Distribution & Conservation Icon" class="theme-icon">
-      <h3>Species Distribution & Conservation</h3>
+      <h3><a href="#species" class="theme-link">Species Distribution & Conservation</a></h3>
       <p>Modeling species habitat preferences to guide ex situ conservation planning, especially for understory and threatened taxa.</p>
     </div>
     <div class="card">
       <img src="Image/Land Degradation Assessment.png" alt="Land Degradation Assessment Icon" class="theme-icon">
-      <h3>Land Degradation Assessment</h3>
+      <h3><a href="#land" class="theme-link">Land Degradation Assessment</a></h3>
       <p>Integrating EO indicators with machine learning to map soil degradation driven by invasive species and unsustainable land use.</p>
     </div>
     <div class="card">
       <img src="Image/Watershed_Basin Dynamics.png" alt="Watershed & Basin Dynamics Icon" class="theme-icon">
-      <h3>Watershed & Basin Dynamics</h3>
+      <h3><a href="#watershed" class="theme-link">Watershed & Basin Dynamics</a></h3>
       <p>Analyzing hydrological systems to support ecosystem-based water management and climate-resilient catchment planning.</p>
     </div>
   </div>
 </section>
+
+<section id="research-tools">
+  <h2>Research Tools</h2>
+  <div class="tools-grid">
+
+    <!-- CPSM -->
+    <div class="tool-card" id="cpsm" class="tool-section">
+      <div class="tool-logo">
+        <img src="Image/CPSModel Icon.svg" alt="CPSM Logo">
+        <h3><a href="#theme-cpsm" class="tool-link">Climate–Phenology Sensitivity Model (CPSM)</a></h3>
+      </div>
+      <div class="tool-info">
+        <p>
+          The Climate–Phenology Sensitivity Model (CPSM) is designed to quantify and analyze the
+          sensitivity of vegetation phenology to climate variables such as temperature, precipitation,
+          and radiation. It integrates remote sensing datasets with climate information to identify
+          vegetation response thresholds and early warning signals of ecosystem change.
+        </p>
+        <div class="tool-screenshot">
+          <img src="Image/CPSModel.png" alt="CPSM Screenshot">
+        </div>
+      </div>
+    </div>
+
+    <!-- VeMATool -->
+    <div class="tool-card" id="vematool" class="tool-section">
+      <div class="tool-logo">
+        <img src="Image/vemat.png" alt="VeMATool Logo">
+        <h3><a href="#theme-vematool" class="tool-link">VeMATool</a></h3>
+      </div>
+      <div class="tool-info">
+        <p>
+          VeMATool (Vegetation Monitoring and Analytical Tool) is a web-based application developed
+          on Google Earth Engine to monitor vegetation phenology, climate interactions, and land
+          cover dynamics. It provides open access to analytical functions for vegetation-climate
+          research, enabling real-time insights into ecosystem processes.
+        </p>
+        <div class="tool-screenshot">
+          <img src="Image/Vemat GUI.png" alt="VeMATool GUI">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
 <footer class="footer">
   <div class="footer-container">
@@ -94,6 +141,29 @@
   <p>💚 <em>Site design and content support by EcoDapt Lab team with AI-assisted development</em></p>
   </div>
 </footer>
+
+<script>
+  // Highlight correct theme/tool when section is in view
+  document.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll(".tool-section");
+    let scrollPos = window.scrollY + 150;
+
+    sections.forEach(sec => {
+      if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+        const id = sec.getAttribute("id");
+
+        document.querySelectorAll(".theme-link, .tool-link").forEach(link => {
+          link.classList.remove("active");
+        });
+
+        document.querySelector(`#theme-${id}`)?.classList.add("active");
+        document.querySelector(`#${id} .tool-link`)?.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
