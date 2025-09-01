@@ -428,19 +428,27 @@ html, body { margin: 0; padding: 0; }
 
 .theme-link,
 .tool-link {
-  text-decoration: none;
-  color: #333;
+  display: inline-block;
   padding: 6px 12px;
-  border-radius: 9999px;  /* makes it pill-shaped */
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 999px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color .25s, color .25s;
 }
 
 .theme-link.active,
 .tool-link.active {
   background-color: #2e7d32; /* green pill */
-  color: #fff;               /* white text inside */
-  font-weight: 500;
+  color: #fff;
+  font-weight: 600;
 }
+
+/* Prevent headings from hiding behind sticky nav */
+h3[id], h4[id] {
+  scroll-margin-top: 100px;
+}
+
+
 
 /* Research Tools */
 #research-tools {
