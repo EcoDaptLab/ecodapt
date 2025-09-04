@@ -352,6 +352,11 @@ html, body { margin: 0; padding: 0; }
 }
 
 /* Research page */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
 .research-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -447,9 +452,9 @@ h3[id], h4[id] {
 
 #research-tools h2 {
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 30px;
 }
-
 /* Pills hover */
 .research-tools a:hover {
   background-color: #e0e0e0;
