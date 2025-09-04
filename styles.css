@@ -358,16 +358,6 @@ html, body { margin: 0; padding: 0; }
   gap: 2rem;
 }
 
-/*.card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-  padding: 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  color: white;
-  text-align: center;
-}*/
 .card {
   background: white !important;
   color: #1c1f30 !important;
@@ -425,6 +415,7 @@ html, body { margin: 0; padding: 0; }
   margin-bottom: 1rem;
   filter: invert(28%) sepia(48%) saturate(423%) hue-rotate(92deg) brightness(90%) contrast(88%);
 }
+
 /* Links */
 .theme-link,
 .tool-link {
@@ -459,29 +450,7 @@ h3[id], h4[id] {
   margin-bottom: 30px;
 }
 
-/* Pills container 
-.research-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  margin: 1rem 0;
-  padding: 0;
-} 
-
-/* Each pill 
-.research-tools a {
-  display: inline-block;
-  background-color: #f3f4f6;
-  color: #333;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  white-space: nowrap;
-  transition: background-color 0.3s ease;
-}*/
-
+/* Pills hover */
 .research-tools a:hover {
   background-color: #e0e0e0;
 }
@@ -491,39 +460,27 @@ h3[id], h4[id] {
   color: #fff;
   font-weight: 500;
 }
-/* Tool icons (logos at the top of each card) */
+
 /* Tool header (icon + title inline) */
 .tool-header {
   display: flex;
   align-items: center;
-  justify-content: center; /* keeps both centered in card */
-  gap: 10px; /* space between icon and title */
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 10px;
-}
-
-.tool-header img.tool-icon {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
-
-.tool-header {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .tool-header .tool-icon {
-  width: 60px;   /* adjust size */
+  width: 60px;
   height: 60px;
   object-fit: contain;
-  display: inline-block;
-  margin-bottom: 6px;
 }
 
 /* Tool screenshots (large images at bottom of cards) */
 .tool-screenshot {
   width: 100%;
-  height: 180px;     /* same height for all screenshots */
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
   margin-top: 10px;
@@ -532,7 +489,7 @@ h3[id], h4[id] {
 /* Unified Grid (used by both Research Tools & Capacity Building) */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -553,16 +510,6 @@ h3[id], h4[id] {
   margin: 10px 0;
 }
 
-/* Generic images inside grid-items, but exclude icons */
-.grid-item img:not(.tool-icon) {
-  width: 100%;
-  height: 180px;   /* match screenshot height */
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-
 /* Capacity Building */
 #capacity-building {
   padding: 40px 20px;
@@ -574,46 +521,12 @@ h3[id], h4[id] {
   margin-bottom: 30px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.grid-item {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  transition: transform 0.3s ease;
-}
-
-.grid-item:hover {
-  transform: translateY(-5px);
-}
-
-.grid-item img {
+.capacity-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
-}
-
-.capacity-img {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.capacity-img {
-  width: 70%;
-  height: auto;
-  border-radius: 12px;
-  margin: 0 auto;
-  display: block;
 }
 
 
